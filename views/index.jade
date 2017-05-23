@@ -1,0 +1,23 @@
+extends layout
+
+block content
+    script.
+        function herpDerp() {
+            var A = document.getElementsByName('A')[0].value;
+            var B = document.getElementsByName('B')[0].value;
+            var out = (parseFloat(A) * parseFloat(A)) + (parseFloat(B) * parseFloat(B));
+            document.getElementsByName('output')[0].value = out;
+        }
+    h1= title
+    p Welcome to my Pythagorean Theorem Calculator Project
+    p Below I have created a calculator to help solve for C assuming you already have A and B.
+    label Side A:
+    input(type='textbox', name='A')
+    br
+    label Side B:
+    input(type='textbox', name='B')
+    br
+    button(onclick='herpDerp()') Do Math!
+    br
+    label Answer
+    input(type='textbox', name='output')
